@@ -10,11 +10,19 @@ They can only herd animals away from them; so be careful not to get stuck in a c
 ## Screenshot
 
 　　　⬛⬛⬛⬛⬛　　
+
 　　⬛　　　　　⬛　
+
 　⬛　　　🐕　　　⬛
+
 　⬛　　　　　　　⬛
+
 　⬛　　　🎯　　　⬛
+
 　⬛　　　　　　　⬛
+
 　⬛　　　🐓　　　⬛
+
 　　⬛　　　　　⬛　
+
 　　　⬛⬛⬛⬛⬛　　
