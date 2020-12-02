@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+
+import fileinput
+import sys
+import termios
+import tty
+
+
+def main() -> str:
+    level = []
+    for height, line in enumerate(fileinput.input()):
+        level.extend([char for char in line])
+    movement = {"w": -len(line), "d": 1, "s": len(line), "a": -1}
+    old = termios.tcgetattr(sys.stdin)
+    tty.setcbreak(sys.stdin)
+    print("\n" + "".join(level))
+    while "🎯" in level:
+        key = sys.stdin.read(1)
+        if key in movement:
+            for i, tile in enumerate(level):
+                if tile == "🐕":
+                    if level[i + movement[key]] not in "⬛🎯":
+                        if level[i + movement[key]] != "　":
+                            if level[i + movement[key] * 2] == "　":
+                                level[i + movement[key] * 2] = level[i + movement[key]]
+                            elif level[i + movement[key] * 2] == "🎯":
+                                level[i + movement[key] * 2] = "　"
+                            else:
+                                break
+                        level[i] = "　"
+                        level[i + movement[key]] = "🐕"
+                    break
+            for _ in range(height + 2):
+                sys.stdout.write("\033[F")
+            print("".join(level))
+    termios.tcsetattr(sys.stdin.fileno(), termios.TCSADRAIN, old)
+    print("Well done!")
+
+
+if __name__ == "__main__":
+    main()
