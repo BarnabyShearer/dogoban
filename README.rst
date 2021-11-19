@@ -12,7 +12,7 @@ Install
 
 ::
 
-    pip install dogoban
+    python3 -m pip install dogoban
      ./dogoban level001.txt
 
 Your dog responds to commands for the compass cardinal points: WASD.
