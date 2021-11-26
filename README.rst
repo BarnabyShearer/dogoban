@@ -1,16 +1,15 @@
 =======
 dogoban
 =======
-
-.. image:: https://badge.fury.io/py/dogoban.svg
-    :target: https://badge.fury.io/py/dogoban
+.. image:: https://img.shields.io/pypi/v/dogoban?color=success
+    :target: https://pypi.org/project/dogoban
 
 Your trusty sheepdog is hungry. Help them corral the animals needed to produce their balanced food.
 
 Install
 -------
 
-::
+.. code-block:: bash
 
     python3 -m pip install dogoban
      ./dogoban level001.txt
